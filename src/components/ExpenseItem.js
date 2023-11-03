@@ -1,3 +1,4 @@
+/*imported mdadd and faminus below to add icons in return HTML*/
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
