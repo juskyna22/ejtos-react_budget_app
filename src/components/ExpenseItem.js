@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
+import { MdAddCircle } from 'react-icons/md';
+import { FaMinusCircle } from 'react-icons/fa';
 
 const ExpenseItem = (props) => {
     const { dispatch } = useContext(AppContext);
@@ -22,15 +24,32 @@ const ExpenseItem = (props) => {
             type: 'ADD_EXPENSE',
             payload: expense
         });
+    
 
-    }
+    };
+/*added this to hook the on click event to the context pag*/
+    const decreaseAllocation = (name) => {
+        const expense = {
+            name: name,
+            cost: 10,
+        };
 
+        dispatch({
+            type: 'RED_EXPENSE',
+            payload: expense
+        });
+    
+
+    };
+/*added decrease allocation button below*/
+/*changed button tags to imported react icons increase and decrease, added size and color style atrtributes*/
     return (
         <tr>
         <td>{props.name}</td>
         <td>£{props.cost}</td>
-        <td><button onClick={event=> increaseAllocation(props.name)}>+</button></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+        <td><MdAddCircle size='2.2em' color='green' onClick={event=> increaseAllocation(props.name)}></MdAddCircle></td>
+        <td><FaMinusCircle size='2.2em' color='red' onClick={event=> decreaseAllocation(props.name)}></FaMinusCircle></td> 
+        <td><TiDelete  size='1.5em'  onClick={handleDeleteExpense}></TiDelete ></td>
         </tr>
     );
 };
