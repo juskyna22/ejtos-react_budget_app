@@ -3,7 +3,7 @@ what you’ll use to update the state.*/
 
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
+/*added Location to the use context hook*/
 const AllocationForm = (props) => {
     const { dispatch,remaining, Location  } = useContext(AppContext);
 
