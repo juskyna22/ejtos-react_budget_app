@@ -17,7 +17,7 @@ const Location = () => {
   
     return (
         <div className='alert alert-secondary'> Location {
-      <select name="Location" id="Location" onChange={event=>changeLocation(event.target.value)}>
+      <select name="Location" id="Location" color= "purple" onChange={event=>changeLocation(event.target.value)}>
         <option value="$">$ Dollar</option>
         <option value="£">£ Pound</option>
         <option value="€">€ Euro</option>
