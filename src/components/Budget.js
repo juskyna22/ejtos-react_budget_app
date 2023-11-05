@@ -3,17 +3,18 @@
 
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
-
+/*added Location to the const { budget, Location } = useContext(AppContext);*/
 const Budget = () => {
-    const { budget } = useContext(AppContext);
+    const { budget, Location } = useContext(AppContext);
     const [newBudget, setNewBudget] = useState(budget);
     const handleBudgetChange = (event) => {
         setNewBudget(event.target.value);
     }
     return (
 <div className='alert alert-secondary'>
-/*Task 5 currency prefix with next line of code*/
-<span>Budget: £{budget}</span>
+/*Task 5 currency prefix with next line of code, replaced Euro symbol with Location for Task6*/
+        
+<span>Budget: {Location}{budget}</span>
 <input type="number" min="0" max="20000" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );
