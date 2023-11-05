@@ -6,7 +6,7 @@ import { MdAddCircle } from 'react-icons/md';
 import { FaMinusCircle } from 'react-icons/fa';
 
 const ExpenseItem = (props) => {
-    const { dispatch } = useContext(AppContext);
+    const { dispatch, Location } = useContext(AppContext);
 
     const handleDeleteExpense = () => {
         dispatch({
@@ -44,10 +44,11 @@ const ExpenseItem = (props) => {
     };
 /*added decrease allocation button below*/
 /*changed button tags to imported react icons increase and decrease, added size and color style atrtributes*/
+/*Replaced the £ props.name wirth Location and added context hook above*/
     return (
         <tr>
         <td>{props.name}</td>
-        <td>£{props.cost}</td>
+        <td>{Location}{props.cost}</td>
         <td><MdAddCircle size='2.2em' color='green' onClick={event=> increaseAllocation(props.name)}></MdAddCircle></td>
         <td><FaMinusCircle size='2.2em' color='red' onClick={event=> decreaseAllocation(props.name)}></FaMinusCircle></td> 
         <td><TiDelete  size='1.5em'  onClick={handleDeleteExpense}></TiDelete ></td>
