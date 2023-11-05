@@ -12,6 +12,7 @@ const Budget = () => {
     }
     return (
 <div className='alert alert-secondary'>
+/*Task 5 currency prefix with next line of code*/
 <span>Budget: £{budget}</span>
 <input type="number" min="0" max="20000" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
