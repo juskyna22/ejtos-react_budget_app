@@ -61,7 +61,8 @@ const AllocationForm = (props) => {
                         <option defaultValue value="Add" name="Add">Add</option>
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
-/*Tast 4 add currecncy prefix to Change Allocation text box*/
+/*Tast 4 add currecncy prefix to Change Allocation text box, added a line of code below  <span>: £ </span>*/
+                <span>: £ </span>
                     <input
                         required='required'
                         type='number'
