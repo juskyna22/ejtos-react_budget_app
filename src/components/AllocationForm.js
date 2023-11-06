@@ -35,7 +35,8 @@ const AllocationForm = (props) => {
                 });
             }
     };
-
+/*Tast 4 add currecncy prefix to Change Allocation text box, added a line of code below  <span>: £ </span>, 
+replaced £ with Location use context hook*/
     return (
         <div>
             <div className='row'>
@@ -61,9 +62,13 @@ const AllocationForm = (props) => {
                         <option defaultValue value="Add" name="Add">Add</option>
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
-/*Tast 4 add currecncy prefix to Change Allocation text box, added a line of code below  <span>: £ </span>, replaced £ with Location use context hook*/
-                <span>: {Location} </span>
+        
+                  
+                  
+                  <span>  £{Location} </span>
+
                     <input
+                        
                         required='required'
                         type='number'
                         id='cost'
@@ -71,12 +76,12 @@ const AllocationForm = (props) => {
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
-
+               
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
                     </button>
                 </div>
-                </div>
+            </div>
 
         </div>
     );
