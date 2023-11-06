@@ -11,10 +11,11 @@ const Budget = () => {
         setNewBudget(event.target.value);
     }
     return (
+        /*Task 5 currency prefix with next line of code, replaced Euro symbol with Location for Task6*/
 <div className='alert alert-secondary'>
-/*Task 5 currency prefix with next line of code, replaced Euro symbol with Location for Task6*/
+
         
-<span>Budget: {Location}{budget}</span>
+<span> Budget:£{Location}</span>
 <input type="number" min="0" max="20000" step="10" value={newBudget} onChange={handleBudgetChange}></input>
 </div>
     );
