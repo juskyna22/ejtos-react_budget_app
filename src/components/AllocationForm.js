@@ -63,12 +63,10 @@ replaced £ with Location use context hook*/
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
         
-                  
-                  
-                  <span>  £{Location} </span>
-
+                        <div className="input-group-prepend">
+                <label className="input-group-text" htmlFor="inputGroupSelect01">£{Location}</label>
+                      </div>
                     <input
-                        
                         required='required'
                         type='number'
                         id='cost'
