@@ -68,8 +68,10 @@ replaced £ with Location use context hook*/
 
 
                  
-                
-                 <span> {Location} </span>
+ 
+                  
+                <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
+                   <label className="input-group-text" class='bg-info'>{Location}
                     <input
                         required='required'
                         type='number'
@@ -77,11 +79,14 @@ replaced £ with Location use context hook*/
                         value={cost}
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
-                        </input>
+                    </input>
+                    </label>
+                </div>
                 
                     
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
+
                     </button>
                 </div>
             </div>
@@ -92,3 +97,8 @@ replaced £ with Location use context hook*/
 
 export default AllocationForm;
 /*Here, you are adding form tags, adding a label/input for name, cost and action field, and adding values for various departments.*/
+ /*</div>                   <form action="/action_page.php">
+    <div class="input-group mb-3">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" placeholder="Username" name="usrname">
+    </div>*/
