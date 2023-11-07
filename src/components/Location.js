@@ -18,8 +18,9 @@ const Location = () => {
       Dropdown button
     </button>*/
     return (
-        
-      <select name='location' class='custom-select'  onChange={event=>changeLocation(event.target.value)}>
+     <div className='mt-3'>  
+
+      <select name='location' class='custom-select bg-primary text-white'  onChange={event=>changeLocation(event.target.value)}>
         <option selected>Currency (£ Pound)</option>
         <option value="$"> $ Dollar</option>
         <option value="£">£ Pound</option>
