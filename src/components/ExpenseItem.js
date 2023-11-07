@@ -44,7 +44,7 @@ const ExpenseItem = (props) => {
     };
 /*added decrease allocation button below*/
 /*changed button tags to imported react icons increase and decrease, added size and color style atrtributes*/
-/*Replaced the £ props.name wirth Location and added context hook above*/
+/*Replaced the £ props.name with Location and added context hook above*/
     return (
         <tr>
         <td>{props.name}</td>
