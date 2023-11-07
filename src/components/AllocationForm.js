@@ -68,7 +68,7 @@ replaced £ with Location use context hook*/
 
 
                  <div   className='alert alert-secondary'>
-                 <span> Budget:£{Location}</span
+                 <span> {Location} </span
     
                     <input
                         required='required'
