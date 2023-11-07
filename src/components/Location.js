@@ -14,16 +14,19 @@ const Location = () => {
                 payload: val,
             })
     }
-  
+  /*  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Dropdown button
+    </button>*/
     return (
-        <div className='alert alert-secondary'> Currency {
-      <select name="Location" id="Location" color= "red" onChange={event=>changeLocation(event.target.value)}>
-        <option value="$">Dollar($)</option>
-        <option value="£">Pound(£)</option>
-        <option value="€">Euro(€)</option>
-        <option value="₹">Ruppee(₹)</option>
+        
+      <select name='location' class='custom-select'  onChange={event=>changeLocation(event.target.value)}>
+        <option selected>Currency (£ Pound)</option>
+        <option value="$"> $ Dollar</option>
+        <option value="£">£ Pound</option>
+        <option value="€">€ Euro</option>
+        <option value="₹">₹ Ruppee</option>
       </select>	
-      }	
+      
     </div>
     );
 };
