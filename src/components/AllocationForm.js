@@ -67,9 +67,9 @@ replaced £ with Location use context hook*/
         
 
 
-                 <div   className='alert alert-secondary'>
+                 
+                
                  <span> {Location} </span>
-    
                     <input
                         required='required'
                         type='number'
@@ -78,8 +78,8 @@ replaced £ with Location use context hook*/
                         style={{ marginLeft: '2rem' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                         </input>
-                </div>
-               
+                
+                    
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
                     </button>
